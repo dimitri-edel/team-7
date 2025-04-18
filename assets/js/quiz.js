@@ -116,8 +116,8 @@ function displayQuestion() {
       }
     });
 
-    // Show reasoning for the selected answer
-    reasoningElement.textContent = question.reasons[correctAnswerIndex];
+    const selectedAnswerIndex = question.answers.indexOf(selectedAnswer);
+    reasoningElement.textContent = question.reasons[selectedAnswerIndex];
     reasoningContainer.style.display = "block";
 
     // Update score if correct answer
@@ -128,7 +128,7 @@ function displayQuestion() {
     // Store selected answer and reasoning for results display
     allReasonings[currentQuestionIndex] = {
       answer: selectedAnswer,
-      reasoning: question.reasons[correctAnswerIndex],
+      reasoning: question.reasons[selectedAnswerIndex],
       correct: selectedAnswer === question.answers[correctAnswerIndex]
     };
 
@@ -152,7 +152,7 @@ function showResults() {
         <p><strong>Reasoning:</strong> ${item.reasoning}</p>
         <p><strong>Correct answer:</strong> ${
           quizData[index].answers[quizData[index].correct]
-        }
+        }</p>
       </div>
     `;
   });
