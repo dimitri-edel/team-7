@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Quotes</title>
+    <link rel="stylesheet" href="assets/css/quotes.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="quote-container">
+            <div class="image-container left">
+                <img id="left-image" src="" alt="Motivational Image Left">
+            </div>
+            <div class="quote-content">
+                <p id="quote-text">"Your motivational quote will appear here."</p>
+            </div>
+            <div class="image-container right">
+                <img id="right-image" src="" alt="Motivational Image Right">
+            </div>
+        </div>  
+        <div class="quote-footer">
+            <p>Click the button below to get a new quote!</p>
+            <button id="next-quote-button" class="btn btn-primary" onclick="onNextQuoteButtonClick()">Next Quote</button>
+        </div>  
+    </div>
+    <script src="assets/js/quotes.js"></script>
+    <script>
+        const quotes = new Quotes();
+
+        async function displayQuote() {
+            await quotes.ready();
+            const nextQuote = quotes.next();
+
+            if (nextQuote) {
+                document.getElementById("quote-text").textContent = nextQuote.text;
+                document.getElementById("left-image").src = quotes.image_path + nextQuote.images[0];
+                document.getElementById("right-image").src = quotes.image_path + nextQuote.images[1];
+            }
+        }
+
+        function onNextQuoteButtonClick() {
+            displayQuote();
+        }
+
+        displayQuote();
+    </script>
+</body>
+
+</html>
