@@ -80,6 +80,59 @@ The application is organized into the following pages:
 
 We plan to implement tests to ensure the functionality and reliability of the quiz logic, scoring system, and user interface interactions. This will help us identify and fix any potential issues before deployment.
 
+### Development Testing
+
+During development, we use Jest to ensure the functionality and reliability of the application's JavaScript logic.  This includes unit and integration tests for:
+
+* Quiz question and answer handling
+* Scoring calculations
+* Feedback display
+* Navigation logic
+
+### Deployment Testing
+
+Since this application is deployed on Google Pages, which serves static files, we perform manual testing to verify the user experience and functionality in a browser environment. The following tables outline the manual testing procedures for each page:
+
+#### Landing Page (`index.html`)
+
+| TEST ACTION                                                                    | EXPECTATION                                                                                               | RESULT    |
+| :----------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :-------- |
+| User opens the landing page URL                                                | The landing page is displayed with a title, introduction, and a call to action.                            | to be added   |
+| User clicks the "Start Quiz" button                                            | The user is redirected to the quiz page (`quiz.html`).                                                    | to be added   |
+| User views the page on different screen sizes (desktop, mobile)               | The layout is responsive and content is displayed correctly.                                               | to be added   |
+| User checks for broken links/images.                                            | All links are functional, and all images are displayed correctly.                                           | to be added   |
+
+#### Quiz Page (`quiz.html`)
+
+| TEST ACTION                                                                    | EXPECTATION                                                                                                                                                                                          | RESULT    |
+| :----------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- |
+| User opens the quiz page URL                                                   | The quiz page is displayed with the first question, answer options, and a score display.                                                                                                            | to be added   |
+| User selects a correct answer                                                  | The user receives positive feedback, the score is updated, and the next question (or end of quiz) is displayed.                                                                                   | to be added   |
+| User selects an incorrect answer                                                | The user receives feedback explaining why the answer is incorrect, a motivational message, and the next question (or end of quiz) is displayed.                                                | to be added   |
+| User completes the quiz                                                        | The user is redirected to the scoreboard page (`scoreboard.html`) with their final score.                                                                                                   | to be added   |
+| User navigates through multiple questions.                                         | The questions are displayed in the correct order, and the quiz functions as expected.                                                                                                                    | to be added   |
+| User refreshes the page mid-quiz.                                               | The quiz restarts from the beginning (or the user's progress is saved - if implemented).                                                                                                      | to be added   |
+| User attempts to manipulate the score in the browser's developer tools.        | The application logic prevents the score from being manipulated is responsive, and content is displayed correctly.                                                                                                                                       | to be added   |
+
+#### About Page (`about.html`)
+
+| TEST ACTION                                                                    | EXPECTATION                                                                        | RESULT    |
+| :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :-------- |
+| User opens the about page URL                                                  | The about page is displayed with information about the team members.                | to be added   |
+| User views the team member information                                         |  The names, and any other displayed information about the team members are accurate.  | to be added   |
+| User checks for broken links/images.                                            | All links are functional, and all images (if any) are displayed correctly.           | to be added   |
+| User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                         | to be added   |
+
+#### Scoreboard Page (`scoreboard.html`)
+
+| TEST ACTION                                                                    | EXPECTATION                                                                                    | RESULT    |
+| :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- | :-------- |
+| User opens the scoreboard page URL                                             | The scoreboard page is displayed.                                                               | to be added   |
+| User views their score after completing the quiz.                                 | The user's score from the completed quiz is displayed correctly.                                 | to be added   |
+| User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                                    | to be added   |
+| User navigates to the scoreboard without completing the quiz.                  | The scoreboard displays an appropriate message (e.g., "Complete the quiz to see your score").    | to be added   |
+| User checks the layout and visual presentation of the scoreboard.            | The scoreboard is visually appealing and easy to read.                               | to be added   |
+
 ## Contributing
 
 (Optional: If you plan to open-source and accept contributions)
