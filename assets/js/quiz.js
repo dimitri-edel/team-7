@@ -24,6 +24,7 @@ function shuffleArray(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]; // Swap elements
   }
+  console.log("Shuffled quiz data:"); // Debugging line
 }
 
 // Display the current question and options
