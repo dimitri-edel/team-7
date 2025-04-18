@@ -8,7 +8,7 @@ let allReasonings = [];
 async function fetchQuizData() {
   const response = await fetch('quiz_data.json');
   const data = await response.json();
-  quizData = data.questions;
+  quizData = data; // Directly assign the array of objects
   displayQuestion(); // Display the first question
 }
 
