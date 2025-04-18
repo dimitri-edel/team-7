@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impostor Syndrome Quiz</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0zG9hE0fL1uYXuyal9kFqHoaxoa6Ai5P6DTH+aAm8BQk0Q6h" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/quiz.css">
+</head>
+<body>
+  <div class="container my-5 p-4 shadow-lg rounded bg-light">
+    <h1 class="text-center mb-4 text-primary">Impostor Syndrome Awareness Quiz</h1>
+    
+    <div id="question-container" class="mb-4">
+      <p id="question" class="h4 font-weight-bold"></p>
+      <div id="options-container" class="mb-4"></div>
+      <button id="next-button" class="btn btn-primary" style="display:none;">Next Question</button>
+    </div>
+    
+    <div id="reasoning-container" style="display:none;" class="alert alert-info">
+      <p id="reasoning"></p>
+    </div>
+
+    <div id="result-container" style="display:none;">
+      <h2 class="text-center text-success">Quiz Finished!</h2>
+      <div id="all-reasonings" class="mt-4"></div>
+      <p class="text-center mt-4 text-muted">Thank you for taking the quiz!</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zyFj5f6p9aAw7wX7XT1hP7Jd79xSfw2M8SMF4x5r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0zG9hE0fL1uYXuyal9kFqHoaxoa6Ai5P6DTH+aAm8BQk0Q6h" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0zG9hE0fL1uYXuyal9kFqHoaxoa6Ai5P6DTH+aAm8BQk0Q6h" crossorigin="anonymous"></script>
+
+  <script src="assets/js/quiz.js"></script>
+</body>
+</html>
