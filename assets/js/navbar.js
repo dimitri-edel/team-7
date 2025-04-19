@@ -29,8 +29,8 @@ function loadNavbar() {
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ${
-                              currentPage === "quotes.html" ? "active" : ""
-                            }" href="quotes.html">View Quotes</a>
+                              currentPage === "score-board.html" ? "active" : ""
+                            }" href="score-board.html">High Score</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ${
