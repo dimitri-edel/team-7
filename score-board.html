@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <body
+    class="bg-light text-dark"
+    style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0"
+  >
+    <div id="navbar-placeholder"></div>    
+    <!-- Score table -->
+     <div id=""score-table" class="container my-5 p-4 shadow-lg rounded" style="max-width: 700px; background-color: rgba(42, 61, 102, 0.8); border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+        <h1 class="text-center mb-4 text-primary" style="font-size: 2.5rem; color: #ffffff">Top Ten Scores</h1>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Score</th>
+                </tr>
+            </thead>
+            <tbody id="score-table-body">
+                <!-- Scores will be dynamically inserted here -->
+            </tbody>
+        </table>
+    
+    <!-- Bootstrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/score-board.js"></script>    
+    <script>
+
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 100
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 120
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 95
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 75
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 65
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 95
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 101
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 103
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 55
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 85
+        });
+        saveScoreBoardData({
+            name: "John Doe",
+            score: 90
+        });
+
+        var userData = loadScoreBoardData();
+        console.log(userData);
+        // Top ten scores
+        var topTenScores = userData.sort((a, b) => b.score - a.score).slice(0, 10);
+        // Display the scores in the table
+        var scoreTable = document.getElementById("score-table");
+        var scoreTableBody = document.getElementById("score-table-body");
+        topTenScores.forEach((user, index) => {
+            var row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${user.name}</td>
+                <td>${user.score}</td>
+            `;
+            scoreTableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
