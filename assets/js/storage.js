@@ -18,3 +18,7 @@ function loadScoreBoardData() {
     }
     return null; // No data found
 }
+
+function clearScoreBoardData() {
+    localStorage.removeItem('debug-your-doubts');
+}
