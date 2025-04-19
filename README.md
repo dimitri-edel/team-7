@@ -1,4 +1,4 @@
-# team-7
+# Summit Nexus (Team 7)'s Debug your doubts
 
 ![HTML](https://img.shields.io/badge/Tech-HTML-orange)
 ![CSS](https://img.shields.io/badge/Tech-CSS-blue)
