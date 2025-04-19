@@ -91,7 +91,7 @@ During development, we use Jest to ensure the functionality and reliability of t
 
 ### Deployment Testing
 
-Since this application is deployed on Google Pages, which serves static files, we perform manual testing to verify the user experience and functionality in a browser environment. The following tables outline the manual testing procedures for each page:
+Since this application is deployed on Github Pages, which serves static files, we perform manual testing to verify the user experience and functionality in a browser environment. The following tables outline the manual testing procedures for each page:
 
 #### Landing Page (`index.html`)
 
