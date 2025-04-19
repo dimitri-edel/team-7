@@ -73,7 +73,7 @@ function displayQuestion() {
       }
 
       // Highlight the selected option with darker grey and white text
-      optionButton.classList.add("clicked"); // Add the 'clicked' class when the button is clicked
+      optionButton.classList.add("clicked");
 
       // Update lastClickedButton to the current one
       lastClickedButton = optionButton;
@@ -149,12 +149,14 @@ function showResults() {
   let reasoningsHtml = "";
   allReasonings.forEach((item, index) => {
     reasoningsHtml += `
-      <div class="carousel-item ${index === 0 ? 'active' : ''}">
+      <div class="carousel-item ${index === 0 ? "active" : ""}">
         <div class="carousel-item-content">
           <h5><strong>Question ${index + 1}:</strong></h5>
           <p><strong>Your answer:</strong> ${item.answer}</p>
           <p><strong>Reasoning:</strong> ${item.reasoning}</p>
-          <p><strong>Correct answer:</strong> ${quizData[index].answers[quizData[index].correct]}</p>
+          <p><strong>Correct answer:</strong> ${
+            quizData[index].answers[quizData[index].correct]
+          }</p>
         </div>
       </div>
     `;
@@ -173,8 +175,6 @@ function showResults() {
   resultContainer.style.display = "block"; // Show results
   document.getElementById("question-container").style.display = "none"; // Hide question container
 }
-
-
 
 // Handle next button click
 document.getElementById("next-button").onclick = function () {

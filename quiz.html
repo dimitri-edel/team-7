@@ -19,34 +19,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-light text-dark" style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
+  <body
+    class="bg-light text-dark"
+    style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0"
+  >
     <!-- Floating blobs background -->
     <div id="floating-blobs"></div>
 
     <!-- Main container for the quiz content -->
-    <div class="container my-5 p-4 shadow-lg rounded" style="max-width: 700px; background-color: rgba(42, 61, 102, 0.8); border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
-      <h1 class="text-center mb-4 text-primary" style="font-size: 2.5rem; color: #ffffff;">
+    <div
+      class="container my-5 p-4 shadow-lg rounded"
+      style="
+        max-width: 700px;
+        background-color: rgba(42, 61, 102, 0.8);
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h1
+        class="text-center mb-4 text-primary"
+        style="font-size: 2.5rem; color: #ffffff"
+      >
         Unmasking the Impostor:<br />
         A Self-Discovery Quiz
       </h1>
 
       <div id="question-container" class="mb-4">
-        <p id="question" class="h4" style="color: #ffffff;"></p>
+        <p id="question" class="h4" style="color: #ffffff"></p>
         <div id="options-container" class="mb-4"></div>
-        <button id="submit-button" class="btn btn-primary w-100 mb-3" style="display: none;">
+        <button
+          id="submit-button"
+          class="btn btn-primary w-100 mb-3"
+          style="display: none"
+        >
           Submit Answer
         </button>
-        <button id="next-button" class="btn btn-primary w-100" style="display: none;">
+
+        <!-- Reasoning Container placed above next button -->
+        <div
+          id="reasoning-container"
+          style="display: none"
+          class="alert alert-info"
+        >
+          <p id="reasoning" style="color: #320e3b"></p>
+        </div>
+
+        <button
+          id="next-button"
+          class="btn btn-primary w-100"
+          style="display: none"
+        >
           Next Question
         </button>
-      </div>
-
-      <div id="reasoning-container" style="display: none" class="alert alert-info" style="background-color: #ffffff; color: #320e3b;">
-        <p id="reasoning"></p>
       </div>
 
       <div id="result-container" style="display: none">
