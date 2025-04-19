@@ -1,20 +1,14 @@
-body {
+.main-container {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
   background-color: #f4f4f4;
-}
-
-.main-container {
-  display: flex;
   flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  width: 100%;
-  max-width: 800px;
+  width: 100%; /* Ensure the container spans the full width */
 }
 
 .quote-container {
@@ -25,7 +19,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 80%; /* Change this to control the width of the quote container */
+  max-width: 800px; /* Set a maximum width for the container */
 }
 
 .image-container {
