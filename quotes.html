@@ -29,8 +29,14 @@
     <script src="assets/js/quotes.js"></script>
     <script>
         const quotes = new Quotes();
-
+        // The async function is used to ensure that the quotes are loaded before displaying them.
+        // This is only important when the quotes may not be available immediately when the page loads.
+        // QUIZ ,though, will not require this, because it will take time for the user to answer a qustion.
+        // So, we can just load the quotes when the page loads and not worry about it.
         async function displayQuote() {
+            // The quiz page will NOT NEED THIS, because it will take time for the user to answer a question.
+            // Instead just create an instance of the class in the begiing of quiz.js and use qutes.next() 
+            // to get the next quote when needed.
             await quotes.ready();
             const nextQuote = quotes.next();
 
