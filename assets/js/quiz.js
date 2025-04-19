@@ -139,31 +139,42 @@ function displayQuestion() {
   };
 }
 
-// Show results after the quiz
 function showResults() {
   const resultContainer = document.getElementById("result-container");
   const allReasoningsContainer = document.getElementById("all-reasonings");
+  const reasoningContainer = document.getElementById("reasoning-container");
+
+  reasoningContainer.style.display = "none";
 
   let reasoningsHtml = "";
   allReasonings.forEach((item, index) => {
     reasoningsHtml += `
-      <div class="mb-3">
-        <h5><strong>Question ${index + 1}:</strong></h5>
-        <p><strong>Your answer:</strong> ${item.answer}</p>
-        <p><strong>Reasoning:</strong> ${item.reasoning}</p>
-        <p><strong>Correct answer:</strong> ${
-          quizData[index].answers[quizData[index].correct]
-        }</p>
+      <div class="carousel-item ${index === 0 ? 'active' : ''}">
+        <div class="carousel-item-content">
+          <h5><strong>Question ${index + 1}:</strong></h5>
+          <p><strong>Your answer:</strong> ${item.answer}</p>
+          <p><strong>Reasoning:</strong> ${item.reasoning}</p>
+          <p><strong>Correct answer:</strong> ${quizData[index].answers[quizData[index].correct]}</p>
+        </div>
       </div>
     `;
   });
 
+  // Insert the reasonings into the carousel
+  allReasoningsContainer.innerHTML = reasoningsHtml;
+
+  // Display the results container
+  resultContainer.style.display = "block"; // Show results
+  document.getElementById("question-container").style.display = "none"; // Hide question container
+
   // Display the total score
-  const scoreHtml = `<h4>Your score: ${score} / 15</h4>`;
+  const scoreHtml = `<h4 class="score">Your score: ${score} / 15</h4>`;
   allReasoningsContainer.innerHTML = scoreHtml + reasoningsHtml;
   resultContainer.style.display = "block"; // Show results
   document.getElementById("question-container").style.display = "none"; // Hide question container
 }
+
+
 
 // Handle next button click
 document.getElementById("next-button").onclick = function () {
