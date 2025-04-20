@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   async function fetchQuizData() {
     const response = await fetch("quiz_data.json");
     const data = await response.json();
-    quizData = data.slice(0, 15); // Limit to 15 questions
+    quizData = data;
     shuffleArray(quizData); // Randomize quiz questions
     displayQuestion(); // Start displaying the first question after data is fetched
   }
@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Display the current question and options
   function displayQuestion() {
-    if (currentQuestionIndex >= 15) {
-      showResults(); // Show the results when 15 questions have been displayed
+    if (currentQuestionIndex >= quizData.length) {  // Check the total number of questions dynamically
+      showResults(); // Show the results when all questions have been displayed
       return;
     }
 
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Handle next button click
   document.getElementById("next-button").onclick = function () {
     currentQuestionIndex++;
-    if (currentQuestionIndex < 15) {  // Display only 15 questions
+    if (currentQuestionIndex < 15) {
       displayQuestion();
       this.style.display = "none";
     } else {
@@ -192,4 +192,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Fetch quiz data and display the first question
   fetchQuizData();
+
+  // Quotes array
+  const quotes = [
+    { text: "No one can make you feel inferior without your consent.", author: "Eleanor Roosevelt" },
+    { text: "I can be changed by what happens to me. But I refuse to be reduced by it.", author: "Maya Angelou" },
+    { text: "Do not let what you cannot do interfere with what you can do.", author: "John Wooden" },
+    // Add other quotes here...
+  ];
+
+  // Display a random quote
+  function displayQuote() {
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById("quote-text").textContent = `"${randomQuote.text}"`;
+    document.getElementById("quote-author").textContent = `- ${randomQuote.author}`;
+  }
+
+  // Set interval for quotes to change every 10 seconds
+  setInterval(displayQuote, 10000);
+  displayQuote(); // Call immediately on page load
 });
