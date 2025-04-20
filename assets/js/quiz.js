@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Initialize variables
   let quizData = [];
   let currentQuestionIndex = 0;
@@ -6,18 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
   let allReasonings = [];
   let score = 0;
   let lastClickedButton = null;
-  let username = '';
+  let username = "";
 
   // Function to save the score to localStorage (scoreboard)
   function saveScoreBoardData(playerData) {
-    let currentData = localStorage.getItem('debug-your-doubts');
+    let currentData = localStorage.getItem("debug-your-doubts");
     if (currentData === null) {
       currentData = [];
     } else {
       currentData = JSON.parse(currentData);
     }
     currentData.push(playerData); // Add the current player data to the existing data
-    localStorage.setItem('debug-your-doubts', JSON.stringify(currentData)); // Save back to localStorage
+    localStorage.setItem("debug-your-doubts", JSON.stringify(currentData)); // Save back to localStorage
   }
 
   // Fetch quiz data from JSON file
@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Display the current question and options
   function displayQuestion() {
-    if (currentQuestionIndex >= quizData.length) {  // Check the total number of questions dynamically
+    if (currentQuestionIndex >= quizData.length) {
+      // Check the total number of questions dynamically
       showResults(); // Show the results when all questions have been displayed
       return;
     }
@@ -65,7 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const reasoningContainer = document.getElementById("reasoning-container");
     const reasoningElement = document.getElementById("reasoning");
 
-    questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${question.question}`;
+    questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${
+      question.question
+    }`;
     optionsContainer.innerHTML = ""; // Clear previous options
     reasoningContainer.style.display = "none"; // Hide reasoning initially
 
@@ -106,14 +109,22 @@ document.addEventListener('DOMContentLoaded', function () {
         button.disabled = true;
       });
 
+      // Add icons for correct and incorrect answers
       answerButtons.forEach((button, index) => {
         button.classList.remove(
-          "btn-primary", "btn-success", "btn-danger", "btn-secondary", "clicked"
+          "btn-primary",
+          "btn-success",
+          "btn-danger",
+          "btn-secondary",
+          "clicked"
         );
+
         if (index === correctAnswerIndex) {
           button.classList.add("btn-success");
+          button.innerHTML += ' <i class="fas fa-check-circle"></i>';
         } else if (button.textContent === selectedAnswer) {
           button.classList.add("btn-danger");
+          button.innerHTML += ' <i class="fas fa-times-circle"></i>';
         } else {
           button.classList.add("btn-secondary");
         }
@@ -142,9 +153,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultContainer = document.getElementById("result-container");
     const allReasoningsContainer = document.getElementById("all-reasonings");
     const reasoningContainer = document.getElementById("reasoning-container");
-    
+
     document.getElementById("quote-slideshow").style.display = "none";
-    
+
     reasoningContainer.style.display = "none";
 
     let reasoningsHtml = "";
@@ -174,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Save the score to the scoreboard (localStorage)
     saveScoreBoardData({
       name: username, // Retrieve username from global variable
-      score: score,
+      score: score
     });
 
     // Show the results and add a button to view the scoreboard
@@ -184,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Handle next button click
   document.getElementById("next-button").onclick = function () {
     currentQuestionIndex++;
-    if (currentQuestionIndex < 2) {
+    if (currentQuestionIndex < 15) {
       displayQuestion();
       this.style.display = "none";
     } else {
@@ -197,9 +208,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Quotes array
   const quotes = [
-    { text: "No one can make you feel inferior without your consent.", author: "Eleanor Roosevelt" },
-    { text: "I can be changed by what happens to me. But I refuse to be reduced by it.", author: "Maya Angelou" },
-    { text: "Do not let what you cannot do interfere with what you can do.", author: "John Wooden" },
+    {
+      text: "No one can make you feel inferior without your consent.",
+      author: "Eleanor Roosevelt"
+    },
+    {
+      text: "I can be changed by what happens to me. But I refuse to be reduced by it.",
+      author: "Maya Angelou"
+    },
+    {
+      text: "Do not let what you cannot do interfere with what you can do.",
+      author: "John Wooden"
+    }
     // Add other quotes here...
   ];
 
@@ -207,7 +227,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function displayQuote() {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById("quote-text").textContent = `"${randomQuote.text}"`;
-    document.getElementById("quote-author").textContent = `- ${randomQuote.author}`;
+    document.getElementById(
+      "quote-author"
+    ).textContent = `- ${randomQuote.author}`;
   }
 
   // Set interval for quotes to change every 10 seconds
