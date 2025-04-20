@@ -39,7 +39,6 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 15px;
-  width: 100%;
 }
 
 button:hover {
