@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let allReasonings = [];
   let score = 0;
   let lastClickedButton = null;
-  let username = "";
+  let username = "";  
+  let quotes = []; // Initialize quotes array
+  let image_path = ""; // Path to images
 
   // Function to save the score to localStorage (scoreboard)
   function saveScoreBoardData(playerData) {
@@ -28,6 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
     shuffleArray(quizData); // Randomize quiz questions
     displayQuestion(); // Start displaying the first question after data is fetched
   }
+// ---------------------------- added by me ----------------------------
+  // Function to load motivationsal quotes
+  async function fetchQuotes() {
+    q = new Quotes(); // Create a new instance of the Quotes class
+    await q.ready(); // Wait for the quotes to load    
+    quotes = q.elements; // Store the loaded quotes in the global variable
+    image_path = q.image_path; // Store the image path in the global variable
+    // Shuffle the quotes array
+    shuffleArray(quotes); // Shuffle the quotes array
+  }
+// ---------------------------- added by me ----------------------------
 
   // Function to shuffle the array
   function shuffleArray(array) {
@@ -205,34 +218,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch quiz data and display the first question
   fetchQuizData();
+  fetchQuotes();
+  // wait for 500 ms to load the quotes
+  setTimeout(() => {
+    displayQuote(); // Call immediately on page load
+  }, 500);
 
-  // Quotes array
-  const quotes = [
-    {
-      text: "No one can make you feel inferior without your consent.",
-      author: "Eleanor Roosevelt"
-    },
-    {
-      text: "I can be changed by what happens to me. But I refuse to be reduced by it.",
-      author: "Maya Angelou"
-    },
-    {
-      text: "Do not let what you cannot do interfere with what you can do.",
-      author: "John Wooden"
-    }
-    // Add other quotes here...
-  ];
 
-  // Display a random quote
   function displayQuote() {
+    if (quotes.length === 0) {
+      console.warn("No quotes available.");
+      return;
+    }
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById("quote-text").textContent = `"${randomQuote.text}"`;
-    document.getElementById(
-      "quote-author"
-    ).textContent = `- ${randomQuote.author}`;
+    document.getElementById("left-image").src = `${image_path + randomQuote.images[0]}`;
+    document.getElementById("right-image").src = `${image_path + randomQuote.images[1]}`;
   }
 
   // Set interval for quotes to change every 10 seconds
   setInterval(displayQuote, 10000);
   displayQuote(); // Call immediately on page load
 });
+
+
