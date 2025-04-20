@@ -225,6 +225,27 @@ button:disabled {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+#quote-slideshow {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #a8d8b9;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: #8fbc9f;
+  margin-top: 10px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
