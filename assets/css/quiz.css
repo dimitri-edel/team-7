@@ -80,13 +80,48 @@ button#next-button:hover {
   background-color: #017989;
   transform: scale(1.05);
 }
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+#restart-game-btn, #view-highscore-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: auto;
+}
 
 #view-highscore-btn {
   background-color: #00bcd4;
   border-color: #00bcd4;
   color: white;
-  margin-top: 2rem;
-  width: 800px;
+}
+
+#restart-game-btn {
+  background-color: #320e3b;
+  border-color: #320e3b;
+  color: #a8d8b9;
+}
+
+#view-highscore-btn:hover {
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
+#restart-game-btn:hover {
+  background-color: #a8d8b9;
+  border-color: #a8d8b9;
+  color: #320e3b;
+}
+
+
+#view-highscore-btn {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: white;
 }
 
 #start-quiz-btn {
@@ -223,6 +258,27 @@ button:disabled {
 
 #question-container {
   animation: fadeIn 0.5s ease-in-out;
+}
+
+#quote-slideshow {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #a8d8b9;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: #8fbc9f;
+  margin-top: 10px;
 }
 
 @keyframes fadeIn {
