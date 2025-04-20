@@ -1,0 +1,99 @@
+.main-container {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Stack children vertically */
+  width: 100%; /* Ensure the container spans the full width */
+}
+
+.quote-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(42, 61, 102, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+}
+
+.image-container {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.quote-content {
+  flex: 1; /* Take up remaining space */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.quote-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.quote-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.quote-footer button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.quote-footer button:hover {
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
+.quote-footer button:disabled {
+  background-color: #e0e0e0;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .quote-container {
+    flex-direction: column; 
+    width: 90%;
+  }
+
+  .image-container {
+    flex: 0 0 120px;
+  }
+
+  .quote-content p {
+    font-size: 1.2rem;
+  }
+
+  .quote-footer button {
+    font-size: 1rem;
+  }
+}

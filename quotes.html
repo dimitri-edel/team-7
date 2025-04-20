@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motivational Quotes</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/floatingBlobs.css" />
+    <link rel="stylesheet" href="assets/css/quotes.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Floating blobs background -->
+    <div id="floating-blobs"></div>
+
+    <div class="main-container">
+      <div class="quote-container">
+        <div class="image-container left">
+          <img id="left-image" src="" alt="Motivational Image Left" />
+        </div>
+        <div class="quote-content">
+          <p id="quote-text">"Your motivational quote will appear here."</p>
+        </div>
+        <div class="image-container right">
+          <img id="right-image" src="" alt="Motivational Image Right" />
+        </div>
+      </div>
+      <div class="quote-footer">
+        <p>Click the button below to get a new quote!</p>
+        <button
+          id="next-quote-button"
+          class="btn btn-primary"
+          onclick="onNextQuoteButtonClick()"
+        >
+          Next Quote
+        </button>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/floatingBlobs.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/quotes.js"></script>
+    <script>
+      const quotes = new Quotes();
+      // The async function is used to ensure that the quotes are loaded before displaying them.
+      // This is only important when the quotes may not be available immediately when the page loads.
+      // QUIZ ,though, will not require this, because it will take time for the user to answer a qustion.
+      // So, we can just load the quotes when the page loads and not worry about it.
+      async function displayQuote() {
+        // The quiz page will NOT NEED THIS, because it will take time for the user to answer a question.
+        // Instead just create an instance of the class in the begiing of quiz.js and use qutes.next()
+        // to get the next quote when needed.
+        await quotes.ready();
+        const nextQuote = quotes.next();
+
+        if (nextQuote) {
+          document.getElementById("quote-text").textContent = nextQuote.text;
+          document.getElementById("left-image").src =
+            quotes.image_path + nextQuote.images[0];
+          document.getElementById("right-image").src =
+            quotes.image_path + nextQuote.images[1];
+        }
+      }
+
+      function onNextQuoteButtonClick() {
+        displayQuote();
+      }
+
+      displayQuote();
+    </script>
+  </body>
+</html>
