@@ -19,6 +19,10 @@ The application presents users with various situations that software developers 
     * **Motivational Boost:** A motivational fact or a witty quote accompanied by a relevant image to offer encouragement and lighten the mood. Think of it as a gentle reminder to stay positive!
 * **Scoring:** The application tracks the user's score, rewarding them for recognizing and selecting constructive responses.
 
+## Design: Colour scheme and typography
+
+<img src="team-7\documentation\debugdoubtscolors.png" alt="color scheme">
+
 ## Key Features
 
 * **Interactive Quiz:** Engaging scenarios designed to resonate with the experiences of software developers facing impostor syndrome.
