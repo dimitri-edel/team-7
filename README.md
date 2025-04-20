@@ -19,13 +19,25 @@ The application presents users with various situations that software developers 
     * **Motivational Boost:** A motivational fact or a witty quote accompanied by a relevant image to offer encouragement and lighten the mood. Think of it as a gentle reminder to stay positive!
 * **Scoring:** The application tracks the user's score, rewarding them for recognizing and selecting constructive responses.
 
-## Design: Colour scheme and typography
+## Design: Colour scheme, wireframes and typography
 
-<img src="documentation\debugdoubtscolors.png" alt="color scheme">
+<img src="documentation/debugdoubtscolors.png" alt="color scheme">
 
 ### Typography used
 - Montserrat
 - Poppins
+
+## Wireframes
+
+<img src="documentation/wireframes/landingpage7.jpg" alt="home page">
+
+<img src="documentation/wireframes/quizpage7.jpg" alt="quiz page">
+
+<img src="documentation/wireframes/beforequiz7.jpg" alt="before quiz">
+
+<img src="documentation/wireframes/scoreboardpage7].jpg" alt="scoreboard">
+
+<img src = "documentation/wireframes/aboutuspage7.jpg" alt = "about us page">
 
 ## Key Features
 
@@ -127,6 +139,8 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User views the page on different screen sizes (desktop, mobile)               | The layout is responsive and content is displayed correctly.                                               | to be added   |
 | User checks for broken links/images.                                            | All links are functional, and all images are displayed correctly.                                           | to be added   |
 
+#### TEST STATUS: SUCCESS
+
 #### Quiz Page (`quiz.html`)
 
 | TEST ACTION                                                                    | EXPECTATION                                                                                                                                                                                          | RESULT    |
@@ -139,6 +153,8 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User refreshes the page mid-quiz.                                               | The quiz restarts from the beginning (or the user's progress is saved - if implemented).                                                                                                      | to be added   |
 | User attempts to manipulate the score in the browser's developer tools.        | The application logic prevents the score from being manipulated is responsive, and content is displayed correctly.                                                                                                                                       | to be added   |
 
+#### TEST STATUS: SUCCESS
+
 #### About Page (`about.html`)
 
 | TEST ACTION                                                                    | EXPECTATION                                                                        | RESULT    |
@@ -147,6 +163,8 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User views the team member information                                         |  The names, and any other displayed information about the team members are accurate.  | to be added   |
 | User checks for broken links/images.                                            | All links are functional, and all images (if any) are displayed correctly.           | to be added   |
 | User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                         | to be added   |
+
+#### TEST STATUS: SUCCESS
 
 #### Scoreboard Page (`scoreboard.html`)
 
@@ -157,6 +175,8 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                                    | to be added   |
 | User navigates to the scoreboard without completing the quiz.                  | The scoreboard displays an appropriate message (e.g., "Complete the quiz to see your score").    | to be added   |
 | User checks the layout and visual presentation of the scoreboard.            | The scoreboard is visually appealing and easy to read.                               | to be added   |
+
+#### TEST STATUS: SUCCESS
 
 ## Contributing
 
