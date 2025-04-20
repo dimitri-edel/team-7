@@ -1,0 +1,86 @@
+/* General Container Styling */
+.container {
+  position: relative;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(42, 61, 102, 0.8) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Title of the page */
+.container .title {
+  text-align: center;
+  color: #ffffff !important;
+  font-size: 2.5rem !important;
+  line-height: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold !important;
+}
+
+/* Styling for the score table */
+
+.scoreboard-table{
+    margin-top: 3rem;
+}
+.scoreboard-table th,
+.scoreboard-table td {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.scoreboard-table th {
+  background-color: #320e3b;
+  color: #fff;
+}
+
+.scoreboard-table .score {
+    color: #320e3b;
+}
+
+/* Styling for the 'Back to Quiz' button */
+#back-to-quiz {
+  background-color: #320e3b;
+  border-color: #320e3b;
+  color: #a8d8b9;
+  margin-top: 2rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#back-to-quiz:hover {
+  background-color: #a8d8b9;
+  color: #320e3b;
+  border-color: #a8d8b9;
+  transform: scale(1.05);
+}
+
+/* Button Styling */
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Ensure proper responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+}

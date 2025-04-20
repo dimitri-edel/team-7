@@ -39,7 +39,6 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 15px;
-  width: 100%;
 }
 
 button:hover {
@@ -78,6 +77,31 @@ button#next-button {
 }
 
 button#next-button:hover {
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
+#view-highscore-btn {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: white;
+  margin-top: 2rem;
+  width: 800px;
+}
+
+#start-quiz-btn {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: white;
+  margin-top: 1rem;
+}
+
+#start-quiz-btn:hover {
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
+#view-highscore-btn:hover {
   background-color: #017989;
   transform: scale(1.05);
 }

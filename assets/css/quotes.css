@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full viewport height */
-  background-color: #f4f4f4;
   flex-direction: column; /* Stack children vertically */
   width: 100%; /* Ensure the container spans the full width */
 }

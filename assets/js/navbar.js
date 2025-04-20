@@ -33,6 +33,11 @@ function loadNavbar() {
                             }" href="score-board.html">High Score</a>
                         </li>
                         <li class="nav-item">
+                          <a class="nav-link ${
+                            currentPage === "quotes.html" ? "active" : ""
+                          }" href="quotes.html">Get Motivated</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link ${
                               currentPage === "about.html" ? "active" : ""
                             }" href="about.html">About Us</a>
