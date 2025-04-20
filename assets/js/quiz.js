@@ -5,17 +5,15 @@ let selectedAnswers = [];
 let allReasonings = [];
 let score = 0;
 let lastClickedButton = null;
+let username = '';
 
 // Fetch quiz data from JSON file
 async function fetchQuizData() {
   const response = await fetch("quiz_data.json");
   const data = await response.json();
   quizData = data; // Directly assign the array of objects
-
-  // Randomize the quiz data
-  shuffleArray(quizData);
-
-  displayQuestion(); // Display the first question
+  shuffleArray(quizData); // Randomize quiz questions
+  displayQuestion(); // Start displaying the first question after data is fetched
 }
 
 // Function to shuffle the array
@@ -24,8 +22,20 @@ function shuffleArray(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]; // Swap elements
   }
-  console.log("Shuffled quiz data:"); // Debugging line
 }
+
+// Handle start button click
+document.getElementById("start-quiz-btn").onclick = function () {
+  const inputUsername = document.getElementById("username-input").value;
+  if (inputUsername.trim() !== "") {
+    username = inputUsername; // Store the username
+    document.getElementById("username-section").style.display = "none"; // Hide username section
+    document.getElementById("quiz-section").style.display = "block"; // Show quiz section
+    fetchQuizData(); // Fetch and start the quiz once the username is entered
+  } else {
+    alert("Please enter a username to start the quiz.");
+  }
+};
 
 // Display the current question and options
 function displayQuestion() {
@@ -42,9 +52,7 @@ function displayQuestion() {
   const reasoningContainer = document.getElementById("reasoning-container");
   const reasoningElement = document.getElementById("reasoning");
 
-  questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${
-    question.question
-  }`;
+  questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${question.question}`;
   optionsContainer.innerHTML = ""; // Clear previous options
   reasoningContainer.style.display = "none"; // Hide reasoning initially
 
@@ -63,28 +71,17 @@ function displayQuestion() {
     optionButton.onclick = function () {
       // Store the selected answer
       selectedAnswers[currentQuestionIndex] = answer;
-
-      // Enable the submit button when an answer is selected
-      submitButton.disabled = false;
-
-      // If there's a previously clicked button, reset it
+      submitButton.disabled = false; // Enable submit button when answer is selected
       if (lastClickedButton && lastClickedButton !== optionButton) {
         lastClickedButton.classList.remove("clicked");
       }
-
-      // Highlight the selected option with darker grey and white text
       optionButton.classList.add("clicked");
-
-      // Update lastClickedButton to the current one
-      lastClickedButton = optionButton;
+      lastClickedButton = optionButton; // Update lastClickedButton
     };
-    optionsContainer.appendChild(optionButton); // Add option button to container
+    optionsContainer.appendChild(optionButton);
   });
 
-  // Initially disable the submit button until an option is clicked
   submitButton.disabled = true;
-
-  // Show submit button after an answer is clicked
   submitButton.style.display = "inline-block";
   submitButton.onclick = function () {
     const selectedAnswer = selectedAnswers[currentQuestionIndex];
@@ -93,27 +90,17 @@ function displayQuestion() {
 
     // Disable all option buttons after submitting the answer
     answerButtons.forEach((button) => {
-      button.disabled = true; // Disable the button to prevent further clicks
+      button.disabled = true;
     });
 
-    // Check if the selected answer is correct
     answerButtons.forEach((button, index) => {
-      // Remove any previous color classes
-      button.classList.remove(
-        "btn-primary",
-        "btn-success",
-        "btn-danger",
-        "btn-secondary",
-        "clicked"
-      );
-
-      // Apply correct and incorrect background color (green for correct, red for wrong)
+      button.classList.remove("btn-primary", "btn-success", "btn-danger", "btn-secondary", "clicked");
       if (index === correctAnswerIndex) {
-        button.classList.add("btn-success"); // Green for correct answer
+        button.classList.add("btn-success");
       } else if (button.textContent === selectedAnswer) {
-        button.classList.add("btn-danger"); // Red for incorrect selected answer
+        button.classList.add("btn-danger");
       } else {
-        button.classList.add("btn-secondary"); // Neutral for unselected options
+        button.classList.add("btn-secondary");
       }
     });
 
@@ -121,21 +108,18 @@ function displayQuestion() {
     reasoningElement.textContent = question.reasons[selectedAnswerIndex];
     reasoningContainer.style.display = "block";
 
-    // Update score if correct answer
     if (selectedAnswer === question.answers[correctAnswerIndex]) {
       score++;
     }
 
-    // Store selected answer and reasoning for results display
     allReasonings[currentQuestionIndex] = {
       answer: selectedAnswer,
       reasoning: question.reasons[selectedAnswerIndex],
       correct: selectedAnswer === question.answers[correctAnswerIndex]
     };
 
-    // Show next button after submission
     nextButton.style.display = "inline-block";
-    submitButton.style.display = "none"; // Hide submit button after submission
+    submitButton.style.display = "none";
   };
 }
 
@@ -162,30 +146,24 @@ function showResults() {
     `;
   });
 
-  // Insert the reasonings into the carousel
   allReasoningsContainer.innerHTML = reasoningsHtml;
 
-  // Display the results container
-  resultContainer.style.display = "block"; // Show results
-  document.getElementById("question-container").style.display = "none"; // Hide question container
+  resultContainer.style.display = "block";
+  document.getElementById("question-container").style.display = "none";
 
-  // Display the total score
   const scoreHtml = `<h4 class="score">Your score: ${score} / 15</h4>`;
   allReasoningsContainer.innerHTML = scoreHtml + reasoningsHtml;
-  resultContainer.style.display = "block"; // Show results
-  document.getElementById("question-container").style.display = "none"; // Hide question container
 }
 
-// Handle next button click
 document.getElementById("next-button").onclick = function () {
   currentQuestionIndex++;
-  if (currentQuestionIndex < 15) {
-    displayQuestion(); // Display next question
-    this.style.display = "none"; // Hide next button
+  if (currentQuestionIndex < 2) {
+    displayQuestion();
+    this.style.display = "none";
   } else {
-    showResults(); // Show results at the end
+    showResults();
   }
 };
 
-// Fetch quiz data when page loads
+// Fetch quiz data and display the first question
 fetchQuizData();

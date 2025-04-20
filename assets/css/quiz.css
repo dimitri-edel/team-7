@@ -82,6 +82,31 @@ button#next-button:hover {
   transform: scale(1.05);
 }
 
+#view-highscore-btn {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: white;
+  margin-top: 2rem;
+  width: 800px;
+}
+
+#start-quiz-btn {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: white;
+  margin-top: 1rem;
+}
+
+#start-quiz-btn:hover {
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
+#view-highscore-btn:hover {
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
 button#submit-button {
   background-color: #00bcd4;
   border-color: #00bcd4;
