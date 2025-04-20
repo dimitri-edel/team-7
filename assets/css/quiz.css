@@ -275,10 +275,18 @@ button:disabled {
   color: #a8d8b9;
 }
 
-.quote-author {
-  font-size: 1rem;
-  color: #8fbc9f;
-  margin-top: 10px;
+#left-image { 
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#right-image { 
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 @keyframes fadeIn {

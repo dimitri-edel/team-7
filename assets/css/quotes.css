@@ -3,23 +3,48 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: top; /* Align items to the top */
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  /* height: 100vh;  */
   flex-direction: column; /* Stack children vertically */
   width: 100%; /* Ensure the container spans the full width */
 }
 
-.quote-container {
+#quotes-container {  
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   background-color: rgba(42, 61, 102, 0.8);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 1000px;
+  margin-top: 20px; 
+}
+
+.border-frame {
+  border: 2px solid rgba(42, 61, 102, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+.quote-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .image-container {
@@ -76,6 +101,12 @@
   background-color: #e0e0e0;
   color: #6c757d;
   cursor: not-allowed;
+}
+
+.row {
+  width: 100%; /* Ensure rows take up the full width */
+  margin-left: 0; /* Reset Bootstrap's negative margin */
+  margin-right: 0; /* Reset Bootstrap's negative margin */
 }
 
 /* Add responsive design */
