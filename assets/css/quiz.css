@@ -80,13 +80,48 @@ button#next-button:hover {
   background-color: #017989;
   transform: scale(1.05);
 }
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+#restart-game-btn, #view-highscore-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: auto;
+}
 
 #view-highscore-btn {
   background-color: #00bcd4;
   border-color: #00bcd4;
   color: white;
-  margin-top: 2rem;
-  width: 800px;
+}
+
+#restart-game-btn {
+  background-color: #320e3b;
+  border-color: #320e3b;
+  color: #a8d8b9;
+}
+
+#view-highscore-btn:hover {
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
+#restart-game-btn:hover {
+  background-color: #a8d8b9;
+  border-color: #a8d8b9;
+  color: #320e3b;
+}
+
+
+#view-highscore-btn {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: white;
 }
 
 #start-quiz-btn {

@@ -142,7 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultContainer = document.getElementById("result-container");
     const allReasoningsContainer = document.getElementById("all-reasonings");
     const reasoningContainer = document.getElementById("reasoning-container");
-
+    
+    document.getElementById("quote-slideshow").style.display = "none";
+    
     reasoningContainer.style.display = "none";
 
     let reasoningsHtml = "";
@@ -182,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Handle next button click
   document.getElementById("next-button").onclick = function () {
     currentQuestionIndex++;
-    if (currentQuestionIndex < 15) {
+    if (currentQuestionIndex < 2) {
       displayQuestion();
       this.style.display = "none";
     } else {
