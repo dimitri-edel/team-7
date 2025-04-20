@@ -1,5 +1,5 @@
 .main-container {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,16 +14,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background-color: rgba(42, 61, 102, 0.8);
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Change this to control the width of the quote container */
-  max-width: 800px; /* Set a maximum width for the container */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
 }
 
 .image-container {
-  flex: 0 0 100px; /* Fixed width for images */
+  flex: 0 0 300px;
   text-align: center;
 }
 
@@ -31,7 +31,10 @@
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
 }
+
 
 .quote-content {
   flex: 1; /* Take up remaining space */
@@ -42,25 +45,55 @@
 .quote-content p {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   margin: 0;
 }
 
 .quote-footer {
-  margin-top: 20px; /* Add spacing between quote-container and footer */
+  margin-top: 20px;
   text-align: center;
 }
 
+
 .quote-footer button {
-  background-color: #007bff;
+  background-color: #00bcd4;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
   cursor: pointer;
-  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .quote-footer button:hover {
-  background-color: #0056b3;
+  background-color: #017989;
+  transform: scale(1.05);
+}
+
+.quote-footer button:disabled {
+  background-color: #e0e0e0;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .quote-container {
+    flex-direction: column; 
+    width: 90%;
+  }
+
+  .image-container {
+    flex: 0 0 120px;
+  }
+
+  .quote-content p {
+    font-size: 1.2rem;
+  }
+
+  .quote-footer button {
+    font-size: 1rem;
+  }
 }
