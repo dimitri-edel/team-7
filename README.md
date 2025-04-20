@@ -21,7 +21,11 @@ The application presents users with various situations that software developers 
 
 ## Design: Colour scheme and typography
 
-<img src="team-7\documentation\debugdoubtscolors.png" alt="color scheme">
+<img src="documentation\debugdoubtscolors.png" alt="color scheme">
+
+### Typography used
+- Montserrat
+- Poppins
 
 ## Key Features
 
@@ -56,6 +60,23 @@ The application presents users with various situations that software developers 
 * CSS
 * JavaScript
 
+### Other technologies used
+* Coolors.so
+* canvas.com
+* W3C Validators
+* Slack
+* Google Fonts
+* Font Awesome Icons
+
+## Credits and content
+- GenAI was used to generate certain images for the quiz.
+- Canva was used to make the project logo and team logo.
+- Font Awesome's Icons were used.
+- W3C Validator to perform HTML and CSS tests.
+- Coolors.so to make a colour palette for the website.
+- GitHub was used for version control, team collaboration and effective project management.
+- GitHub Pages/ Render was used to deploy the application.
+
 ## Project Structure
 
 The application is organized into the following pages:
@@ -82,7 +103,7 @@ The application is organized into the following pages:
 
 ## Testing
 
-We plan to implement tests to ensure the functionality and reliability of the quiz logic, scoring system, and user interface interactions. This will help us identify and fix any potential issues before deployment.
+We plan to implement manual tests to ensure the functionality and reliability of the quiz logic, scoring system, and user interface interactions. This will help us identify and fix any potential issues before deployment.
 
 ### Development Testing
 
@@ -162,9 +183,4 @@ This project is licensed under the [MIT License](LICENSE).
 * Integration with social media to share scores (optional and with careful consideration of the sensitive nature of the topic).
 * More diverse and inclusive scenarios.
 
-We hope this quiz provides valuable support and encouragement to software developers on their journey to recognizing their skills and overcoming impostor syndrome!
-
-
-
-
-
+We hope "Debug your doubts" provides valuable support and encouragement to software developers on their journey to recognizing their skills and overcoming impostor syndrome!
