@@ -14,7 +14,7 @@ class Quotes {
   // Async method to load quotes data
   async loadQuotes() {
     try {
-      const response = await fetch("/assets/data/motivation_data.json"); // Updated path
+      const response = await fetch("assets/data/motivation_data.json"); // Updated path
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
