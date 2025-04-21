@@ -1,13 +1,163 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+/* Title Section Styles */
+.meet-team-title-section {
+  color: #320e3b;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.meet-team-title-section h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding: 0 4rem;
+}
+
+.meet-team-title-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding: 0 3rem;
+}
+
+.team-members-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-family: "Poppins", "sans-serif";
+}
+
+/* Card Layout using Flexbox */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.col-md-6 {
+  flex: 0 0 48%;
+  max-width: 48%;
+}
+
+/* Team Member Card Styles */
+.card {
+  background-color: #f8f9fa;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 400px;
+  max-width: 800px;
+  height: 550px;
+}
+
+/* Card Body */
+.card-body {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.card-body img {
+  border: 5px solid #f8f9fa;
+  margin-bottom: 1rem;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1d2f55;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #320e3b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-body i {
+  font-size: 1.8rem;
+  color: #00bcd4;
+  margin-right: 10px;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-body i:hover {
+  color: #320e3b;
+}
+
+/* Impostor Syndrome Text */
+.impostor-syndrome {
+  color: #2a3d66;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .meet-team-title-section {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .meet-team-title-section h1 {
+    font-size: 2rem;
   }
 
-  .rounded-circle {
+  .meet-team-title-section p {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .card-body i {
+    font-size: 1.5rem;
+  }
+
+  .card-body img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .col-md-6 {
+    flex: 0 0 100%;
     max-width: 100%;
-    width: 100%;
+  }
+
+  .card {
+    min-height: 350px;
     height: auto;
-    object-fit: cover;
+  }
 }
