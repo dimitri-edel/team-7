@@ -101,18 +101,22 @@ The application is organized into the following pages:
 2.  **`quiz.html` (Quiz Page):**
     * Displays the quiz questions and answer choices.
     * Handles user interactions, feedback display, and scoring.
-3.  **`about.html` (About Page):**
+3.  **`quotes.html` (Motivational Quotes of famous people):**
+    * Provides quotes of famous people for inspiration
+4.  **`learn-more.html`(Online resources for people suffering from impostor syndrome):**
+    * Provides support to those who seek help and want to learn more about how overcome Impostor Syndrome
+5.  **`about.html` (About Page):**
     * Introduces the team members who created this project.
     * May include brief bios or roles.
-4.  **`scoreboard.html` (Scoreboard):**
+6.  **`score-board.html` (Scoreboard):**
     * Displays the user's final score after completing the quiz.
     * (Future feature: potentially track and display high scores).
-5.  **`css/` (CSS Styles):**
+7.  **`css/` (CSS Styles):**
     * Contains the stylesheets (`style.css` or similar) for the application's visual presentation.
-6.  **`js/` (JavaScript Scripts):**
+8.  **`js/` (JavaScript Scripts):**
     * Contains the JavaScript files (`script.js` or similar) for handling quiz logic, feedback, scoring, and page interactions.
     * May include separate files for different functionalities.
-7.  **`assets/img/` (Images):**
+9.  **`assets/img/` (Images):**
     * Stores images used throughout the application, including motivational images for incorrect answers.
 
 ## Testing
