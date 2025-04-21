@@ -149,24 +149,29 @@ Since this application is deployed on Github Pages, which serves static files, w
 
 | TEST ACTION                                                                    | EXPECTATION                                                                                                                                                                                          | RESULT    |
 | :----------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| User opens the quiz page URL                                                   | The quiz page is displayed with the first question, answer options, and a score display.                                                                                                            | to be added   |
-| User selects a correct answer                                                  | The user receives positive feedback, the score is updated, and the next question (or end of quiz) is displayed.                                                                                   | to be added   |
-| User selects an incorrect answer                                                | The user receives feedback explaining why the answer is incorrect, a motivational message, and the next question (or end of quiz) is displayed.                                                | to be added   |
-| User completes the quiz                                                        | The user is redirected to the scoreboard page (`scoreboard.html`) with their final score.                                                                                                   | to be added   |
-| User navigates through multiple questions.                                         | The questions are displayed in the correct order, and the quiz functions as expected.                                                                                                                    | to be added   |
-| User refreshes the page mid-quiz.                                               | The quiz restarts from the beginning (or the user's progress is saved - if implemented).                                                                                                      | to be added   |
-| User attempts to manipulate the score in the browser's developer tools.        | The application logic prevents the score from being manipulated is responsive, and content is displayed correctly.                                                                                                                                       | to be added   |
+| User clicks on the Quiz link in the navigation bar | A prompt for entering a username appears | SUCCESS |
+| User provides no name in the prompt that opens upon opening the Quiz page | A message appears informing the user that they need to enter a username | SUCCESS: For the time being an alert is used to display the message. Should be replaced with a modal in the future |
+| Upon providing a username in the prompt                                                   | The quiz page is displayed with the first question, answer options, and a motivationl statement accompanied by images above the quiz.                                                                                                            | SUCCESS   |
+| User selects an answer                                                  | The aswer option gets highlighted, so the user can see the option they picked | SUCCESS   |
+| User clicks on 'Submit Aswer' and the answer is  incorrect | The correct answer is highlighted in green and the one they picked is highlighted in red. The user receives feedback explaining why the answer is incorrect and the 'next question' button appears.| SUCCESS |
+| User clicks on 'Submit Anser' and the anser is correct | Their option is highlighted in green and all the other options dissapear from screen. The user receives feedback explaining why the answer is correct and the 'next question' button appears.| SUCCESS |
+| User completes the quiz                                                        | The user can see a carousel that lets them review their answers. Also, two buttons appear 'Restart Game' and 'View High Scores' | SUCCESS   |
+| User clicks on the 'Restart Game' buttoon once the game is finished | The game is reset to the first question | FAILED. The prompt for entering a username appears instead |
+| User clocks on the 'View High Scores' button and the score-board page opens | SUCCESS |
+| User navigates through multiple questions.                                         | The questions are displayed in the correct order, and the quiz functions as expected.                                                                                                                    | SUCCESS  |
+| User refreshes the page mid-quiz.                                               | The quiz restarts from the beginning (or the user's progress is saved - if implemented).                                                                                                      | FAILED  |
+| User opens the quiz on a mobile device | The layout of the quiz is responsive | SUCCESS |
 
-#### TEST STATUS: SUCCESS
+#### TEST STATUS: PARTIAL SUCCESS
 
 #### About Page (`about.html`)
 
 | TEST ACTION                                                                    | EXPECTATION                                                                        | RESULT    |
 | :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :-------- |
-| User opens the about page URL                                                  | The about page is displayed with information about the team members.                | to be added   |
-| User views the team member information                                         |  The names, and any other displayed information about the team members are accurate.  | to be added   |
-| User checks for broken links/images.                                            | All links are functional, and all images (if any) are displayed correctly.           | to be added   |
-| User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                         | to be added   |
+| User opens the about page URL                                                  | The about page is displayed with information about the team members.                | SUCCESS   |
+| User views the team member information                                         |  The names, and any other displayed information about the team members are accurate.  | SUCCESS   |
+| User checks for broken links/images.                                            | All links are functional, and all images are displayed correctly.           | SUCCESS   |
+| User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                         | SUCCESS   |
 
 #### TEST STATUS: SUCCESS
 
