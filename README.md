@@ -229,11 +229,40 @@ Since this application is deployed on Github Pages, which serves static files, w
 | :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- | :-------- |
 | User opens the scoreboard page URL                                             | The scoreboard page is displayed.                                                               | SUCCESS   |
 | User views their score after completing the quiz.                                 | The user's score from the completed quiz is displayed correctly.                                 | SUCCESS   |
+||Usre views ther score at any time | User can see 10 ten scores on the score board | SUCCESS |
 | User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                                    | SUCCESS   |
 
 [Back to Table of Contents](#table-of-contents)
 
 #### TEST STATUS: SUCCESS
+
+#### Learn More Page (`learn-more.html`)
+
+| TEST ACTION                                                                    | EXPECTATION                                                                                    | RESULT    |
+| :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- | :-------- |
+| User clicks on the 'Learn More' link in the navigation bar | Learn More page opoens | SUCCESS |
+| User scrolls down the page | More content appears in blocks (javascript animation) | SUCCESS |
+| User opens the page on a mobile device | The page has a responsive layout | SUCCESS |
+
+[Back to Table of Contents](#table-of-contents)
+
+#### TEST STATUS: SUCCESS
+
+#### Get Motivated Page (`quotes.html`)
+
+
+| TEST ACTION                                                                    | EXPECTATION                                                                                    | RESULT    |
+| :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- | :-------- |
+| User clicks on the 'Get Motivates' link in the navigation bar | Quotes page opoens | SUCCESS |
+| User views the page | User can see a quote in a card. The card has a 'Get a new motivational quote button' | SUCCESS |
+| User clicks on 'Get a new motivational quote button' | Next quote is loaded into the card | SUCCESS |
+
+
+#### TEST STATUS: SUCCESS
+
+#### Get Motivated Page (`quotes.html`)
+
+
 
 ### LIGHTHOUSE
 
