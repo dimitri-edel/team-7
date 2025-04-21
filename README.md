@@ -186,13 +186,14 @@ We welcome contributions to this project! If you have ideas for new scenarios, m
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is a public project. GPL terms apply.
 
 ## Team Members (Mention on the About Page)
 
-* [Your Name/GitHub Handle]
-* [Collaborator's Name/GitHub Handle]
-* ... (Add all team members)
+* [Alina Teodora Brinzac](https://github.com/TeodoraAlina)
+* [Dimitri Edel](https://github.com/dimitri-edel)
+* [Uchechukwu Christian](https://github.com/Uche05)
+* [Rehanon Mackenzie](https://github.com/Rehanon-Mackenzie)
 
 ## Future Enhancements (Optional)
 
