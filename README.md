@@ -5,6 +5,8 @@
 ![JavaScript](https://img.shields.io/badge/Tech-JavaScript-yellow)
 ![Tests](https://img.shields.io/badge/Tests-Planned-brightgreen)
 
+![Project show case](/documentation/responsiveness.png)
+
 ## Project Goal
 
 This project aims to support software developers experiencing impostor syndrome by providing a safe and encouraging space to explore common professional scenarios. Through an interactive quiz, developers can learn to identify helpful and unhelpful thought patterns and reactions, ultimately fostering greater self-compassion and confidence.
