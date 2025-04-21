@@ -1,7 +1,7 @@
 class Quotes {
   constructor() {
     // Constant property for the image path
-    this.image_path = "/assets/images/motivation/"; // Updated path
+    this.image_path = "assets/images/motivation/"; // Updated path
 
     // Initialize properties
     this.elements = [];
