@@ -20,8 +20,7 @@ class Quotes {
       }
       const data = await response.json();
       this.elements = data; // Store the quotes array
-      this.shuffleElements(); // Shuffle the elements
-      console.log("Quotes loaded successfully:", this.elements); // Debugging log
+      this.shuffleElements(); // Shuffle the elements      
     } catch (error) {
       console.error("Error loading quotes:", error);
     }
@@ -46,7 +45,7 @@ class Quotes {
       console.warn("No elements available.");
       return null;
     }
-    console.log("Current index:", this.current_index); // Debugging line
+    
     const nextElement = this.elements[this.current_index];
     this.current_index = (this.current_index + 1) % this.elements.length; // Reset to 0 after the last element
     return nextElement;

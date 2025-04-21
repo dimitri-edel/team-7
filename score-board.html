@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,8 +70,7 @@
 
       // Function to display top scores
       function displayScores() {
-        const userData = loadScoreBoardData();
-        console.log("User Data Loaded:", userData);
+        const userData = loadScoreBoardData();        
 
         if (userData && userData.length > 0) {
           // Sort by score (descending)

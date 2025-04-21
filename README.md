@@ -5,6 +5,8 @@
 ![JavaScript](https://img.shields.io/badge/Tech-JavaScript-yellow)
 ![Tests](https://img.shields.io/badge/Tests-Planned-brightgreen)
 
+![Project show case](/documentation/responsiveness.png)
+
 ## Project Goal
 
 This project aims to support software developers experiencing impostor syndrome by providing a safe and encouraging space to explore common professional scenarios. Through an interactive quiz, developers can learn to identify helpful and unhelpful thought patterns and reactions, ultimately fostering greater self-compassion and confidence.
@@ -134,10 +136,12 @@ Since this application is deployed on Github Pages, which serves static files, w
 
 | TEST ACTION                                                                    | EXPECTATION                                                                                               | RESULT    |
 | :----------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :-------- |
-| User opens the landing page URL                                                | The landing page is displayed with a title, introduction, and a call to action.                            | to be added   |
-| User clicks the "Start Quiz" button                                            | The user is redirected to the quiz page (`quiz.html`).                                                    | to be added   |
-| User views the page on different screen sizes (desktop, mobile)               | The layout is responsive and content is displayed correctly.                                               | to be added   |
-| User checks for broken links/images.                                            | All links are functional, and all images are displayed correctly.                                           | to be added   |
+| User opens the landing page URL                                                | The landing page is displayed with a title, introduction, and a call to action.                            | SUCCESS  |
+| User clicks the "Uncover your true potential" button                                            | The user is redirected to the quiz page (`quiz.html`).                                                    | SUCCESS   |
+| Once the user has scrolled all the way down they see a "Lean More" button and they click on it | The learn-more.html page opens | SUCCESS |
+| User scrolls down the page | More content appears block by block | SUCCESS |
+| User views the page on different screen sizes (desktop, mobile)               | The layout is responsive and content is displayed correctly.                                               | SUCCESS   |
+
 
 #### TEST STATUS: SUCCESS
 
