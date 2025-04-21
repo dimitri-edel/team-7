@@ -7,6 +7,21 @@
 
 ![Project show case](/documentation/responsiveness.png)
 
+## Table of Contents
+
+1. [Project Goal](#project-goal)
+2. [How It Works](#how-it-works)
+3. [Design: Colour scheme, wireframes and typography](#design-colour-scheme-wireframes-and-typography)
+4. [Key Features](#key-features)
+5. [User Stories](#user-stories)
+6. [Technologies Used](#technologies-used)
+7. [Credits and Content](#credits-and-content)
+8. [Project Structure](#project-structure)
+9. [Testing](#testing)
+10. [Contributing](#contributing)
+11. [License](#license)
+12. [Team Members](#team-members-mention-on-the-about-page)
+13. [Future Enhancements](#future-enhancements)
 ## Project Goal
 
 This project aims to support software developers experiencing impostor syndrome by providing a safe and encouraging space to explore common professional scenarios. Through an interactive quiz, developers can learn to identify helpful and unhelpful thought patterns and reactions, ultimately fostering greater self-compassion and confidence.
@@ -21,9 +36,13 @@ The application presents users with various situations that software developers 
     * **Motivational Boost:** A motivational fact or a witty quote accompanied by a relevant image to offer encouragement and lighten the mood. Think of it as a gentle reminder to stay positive!
 * **Scoring:** The application tracks the user's score, rewarding them for recognizing and selecting constructive responses.
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Design: Colour scheme, wireframes and typography
 
 <img src="documentation/debugdoubtscolors.png" alt="color scheme">
+
+[Back to Table of Contents](#table-of-contents)
 
 ### Typography used
 - Montserrat
@@ -33,13 +52,23 @@ The application presents users with various situations that software developers 
 
 <img src="documentation/wireframes/landingpage7.jpg" alt="home page">
 
+[Back to Table of Contents](#table-of-contents)
+
 <img src="documentation/wireframes/quizpage7.jpg" alt="quiz page">
+
+[Back to Table of Contents](#table-of-contents)
 
 <img src="documentation/wireframes/beforequiz7.jpg" alt="before quiz">
 
+[Back to Table of Contents](#table-of-contents)
+
 <img src="documentation/wireframes/scoreboardpage7].jpg" alt="scoreboard">
 
+[Back to Table of Contents](#table-of-contents)
+
 <img src = "documentation/wireframes/aboutuspage7.jpg" alt = "about us page">
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Key Features
 
@@ -55,6 +84,8 @@ The application presents users with various situations that software developers 
 * **Client-Side Technologies:** Built using fundamental web technologies: HTML for structure, CSS for styling, and JavaScript for interactivity.
 * **Planned Testing:** The project includes plans for thorough testing to ensure a smooth and reliable user experience.
 
+[Back to Table of Contents](#table-of-contents)
+
 ## User Stories
 
 * As a software developer experiencing impostor syndrome, I want to easily understand the purpose of this application on the landing page so I know if it can help me.
@@ -67,6 +98,8 @@ The application presents users with various situations that software developers 
 * As a user, I want the application to be easy to navigate between the different pages (landing, quiz, about, scoreboard).
 * As a developer of this application, I want to ensure the quiz logic and scoring are accurate through automated tests.
 * As a user, I want the application to be visually appealing and easy to read so that I can focus on the content.
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Technologies Used
 
@@ -82,6 +115,8 @@ The application presents users with various situations that software developers 
 * Google Fonts
 * Font Awesome Icons
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Credits and content
 - GenAI was used to generate certain images for the quiz.
 - Canva was used to make the project logo and team logo.
@@ -90,6 +125,8 @@ The application presents users with various situations that software developers 
 - Coolors.so to make a colour palette for the website.
 - GitHub was used for version control, team collaboration and effective project management.
 - GitHub Pages/ Render was used to deploy the application.
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Project Structure
 
@@ -119,6 +156,8 @@ The application is organized into the following pages:
 9.  **`assets/img/` (Images):**
     * Stores images used throughout the application, including motivational images for incorrect answers.
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Testing
 
 We plan to implement manual tests to ensure the functionality and reliability of the quiz logic, scoring system, and user interface interactions. This will help us identify and fix any potential issues before deployment.
@@ -146,6 +185,7 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User scrolls down the page | More content appears block by block | SUCCESS |
 | User views the page on different screen sizes (desktop, mobile)               | The layout is responsive and content is displayed correctly.                                               | SUCCESS   |
 
+[Back to Table of Contents](#table-of-contents)
 
 #### TEST STATUS: SUCCESS
 
@@ -166,6 +206,8 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User refreshes the page mid-quiz.                                               | The quiz restarts from the beginning (or the user's progress is saved - if implemented).                                                                                                      | FAILED  |
 | User opens the quiz on a mobile device | The layout of the quiz is responsive | SUCCESS |
 
+[Back to Table of Contents](#table-of-contents)
+
 #### TEST STATUS: PARTIAL SUCCESS
 
 #### About Page (`about.html`)
@@ -177,6 +219,8 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User checks for broken links/images.                                            | All links are functional, and all images are displayed correctly.           | SUCCESS   |
 | User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                         | SUCCESS   |
 
+[Back to Table of Contents](#table-of-contents)
+
 #### TEST STATUS: SUCCESS
 
 #### Scoreboard Page (`scoreboard.html`)
@@ -187,6 +231,7 @@ Since this application is deployed on Github Pages, which serves static files, w
 | User views their score after completing the quiz.                                 | The user's score from the completed quiz is displayed correctly.                                 | SUCCESS   |
 | User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                                    | SUCCESS   |
 
+[Back to Table of Contents](#table-of-contents)
 
 #### TEST STATUS: SUCCESS
 
@@ -216,6 +261,7 @@ Since this application is deployed on Github Pages, which serves static files, w
 
 ![about tests](/documentation/tests/about.png)
 
+[Back to Table of Contents](#table-of-contents)
 
 ## Contributing
 
@@ -244,3 +290,5 @@ This project is a public project. GPL terms apply.
 * More diverse and inclusive scenarios.
 
 We hope "Debug your doubts" provides valuable support and encouragement to software developers on their journey to recognizing their skills and overcoming impostor syndrome!
+
+[Back to Table of Contents](#table-of-contents)
