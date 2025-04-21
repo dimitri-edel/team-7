@@ -34,6 +34,11 @@ function loadNavbar() {
                         </li>
                         <li class="nav-item">
                           <a class="nav-link ${
+                            currentPage === "learn-more.html" ? "active" : ""
+                          }" href="learn-more.html">Learn More</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link ${
                             currentPage === "quotes.html" ? "active" : ""
                           }" href="quotes.html">Get Motivated</a>
                         </li>
