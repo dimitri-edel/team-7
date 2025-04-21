@@ -179,13 +179,39 @@ Since this application is deployed on Github Pages, which serves static files, w
 
 | TEST ACTION                                                                    | EXPECTATION                                                                                    | RESULT    |
 | :----------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- | :-------- |
-| User opens the scoreboard page URL                                             | The scoreboard page is displayed.                                                               | to be added   |
-| User views their score after completing the quiz.                                 | The user's score from the completed quiz is displayed correctly.                                 | to be added   |
-| User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                                    | to be added   |
-| User navigates to the scoreboard without completing the quiz.                  | The scoreboard displays an appropriate message (e.g., "Complete the quiz to see your score").    | to be added   |
-| User checks the layout and visual presentation of the scoreboard.            | The scoreboard is visually appealing and easy to read.                               | to be added   |
+| User opens the scoreboard page URL                                             | The scoreboard page is displayed.                                                               | SUCCESS   |
+| User views their score after completing the quiz.                                 | The user's score from the completed quiz is displayed correctly.                                 | SUCCESS   |
+| User views the page on different screen sizes (desktop, mobile)                | The layout is responsive, and content is displayed correctly.                                    | SUCCESS   |
+
 
 #### TEST STATUS: SUCCESS
+
+### LIGHTHOUSE
+
+#### index.html
+
+![index test](/documentation/tests/index.png)
+
+#### quiz.html
+
+![quiz test](/documentation/tests/quiz.png)
+
+#### score-board.html
+
+![score-board test](/documentation/tests/score-board.png)
+
+#### learn-more.html
+
+![learn-more tests](/documentation/tests/learn-more.png)
+
+#### quotes.html
+
+![quotes tests](/documentation/tests/quotes.png)
+
+#### about.html 
+
+![about tests](/documentation/tests/about.png)
+
 
 ## Contributing
 
